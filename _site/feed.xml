@@ -5,8 +5,8 @@
     <description>This blog records the life and work of Owen !</description>
     <link>http://owengoodluck.github.io/</link>
     <atom:link href="http://owengoodluck.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 15:45:22 +0800</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 15:45:22 +0800</lastBuildDate>
+    <pubDate>Mon, 11 May 2015 00:07:25 +0800</pubDate>
+    <lastBuildDate>Mon, 11 May 2015 00:07:25 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -23,6 +23,132 @@
         <category>life</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>NSFileManager URLsForDirectory</title>
+        <description>&lt;h1 id=&quot;correct-codeing&quot;&gt;Correct codeing&lt;/h1&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;uniqueDoucmentionURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   	&lt;span class=&quot;bp&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentDirectories&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSFileManager&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaultManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;URLsForDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDocumentDirectory&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;inDomains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUserDomainMask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+	&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unique&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;%.0f&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSDate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeIntervalSinceReferenceDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])];&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;documentDirectories&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;URLByAppendingPathComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unique&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;wrong-coding&quot;&gt;Wrong coding&lt;/h1&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;uniqueDoucmentionURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;bp&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentDirectories&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSFileManager&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaultManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;URLsForDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDocumentationDirectory&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;inDomains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUserDomainMask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+		&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unique&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;%.0f&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSDate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeIntervalSinceReferenceDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])];&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;documentDirectories&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;URLByAppendingPathComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unique&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The difference is that the correct code snip is using &lt;strong&gt;NSDocumentDirectory&lt;/strong&gt; as parameter but the wrong code snip is using &lt;strong&gt;NSDocumentationDirectory&lt;/strong&gt; .&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 May 2015 06:28:49 +0800</pubDate>
+        <link>http://owengoodluck.github.io/ios-core/2015/05/11/NSFileManager%20URLsForDirectory.html</link>
+        <guid isPermaLink="true">http://owengoodluck.github.io/ios-core/2015/05/11/NSFileManager%20URLsForDirectory.html</guid>
+        
+        
+        <category>ios-core</category>
+        
+      </item>
+    
+      <item>
+        <title>Markdown common grammar</title>
+        <description>&lt;h2 id=&quot;inline-code&quot;&gt;Inline Code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;`code here`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;multiple-line-code&quot;&gt;Multiple Line Code&lt;/h2&gt;
+&lt;p&gt;–remove the &lt;code&gt;\&lt;/code&gt; betwee &lt;code&gt;{&lt;/code&gt; and &lt;code&gt;%&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;highlight&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objective&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;CodesIsHere&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endhighlight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;headers&quot;&gt;Headers&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;# This is an &amp;lt;h1&amp;gt; tag
+## This is an &amp;lt;h2&amp;gt; tag
+###### This is an &amp;lt;h6&amp;gt; tag
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;*This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+*You **can** combine them*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;unordered-list&quot;&gt;Unordered List&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;ordered-list&quot;&gt;Ordered List&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;images&quot;&gt;Images&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/logo.png&quot; alt=&quot;GitHub Logo&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://github.com&quot;&gt;Lint to GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Lint to GitHub](http://github.com)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;inline&quot;&gt;inline&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;`code here`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;inline-1&quot;&gt;inline&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;`code here`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;inline-2&quot;&gt;inline&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;`code here`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;inline-3&quot;&gt;inline&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;`code here`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;inline-4&quot;&gt;inline&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;`code here`
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+        <pubDate>Mon, 11 May 2015 06:23:49 +0800</pubDate>
+        <link>http://owengoodluck.github.io/markdown/2015/05/11/Markdown%20common%20grammar.html</link>
+        <guid isPermaLink="true">http://owengoodluck.github.io/markdown/2015/05/11/Markdown%20common%20grammar.html</guid>
+        
+        
+        <category>markdown</category>
         
       </item>
     

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Owen's Blog on GitHub</title>
-  <meta name="description" content="This blog records the life and work of Owen !">
+  <title>Markdown common grammar</title>
+  <meta name="description" content="Inline Code`code here`Multiple Line Code–remove the \ betwee { and %{\% highlight objective-c %}CodesIsHere{\% endhighlight %}">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://owengoodluck.github.io/">
+  <link rel="canonical" href="http://owengoodluck.github.io/markdown/2015/05/11/Markdown%20common%20grammar.html">
   <link rel="alternate" type="application/rss+xml" title="Owen's Blog on GitHub" href="http://owengoodluck.github.io/feed.xml" />
 </head>
 
@@ -54,47 +54,101 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Markdown common grammar</h1>
+    <p class="post-meta">May 11, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 11, 2015</span>
+  <article class="post-content">
+    <h2 id="inline-code">Inline Code</h2>
 
-        <h2>
-          <a class="post-link" href="/life/update/2015/05/11/Mother's%20Day.html">Happy Mother's Day</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 11, 2015</span>
+<pre><code>`code here`
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/ios-core/2015/05/11/NSFileManager%20URLsForDirectory.html">NSFileManager URLsForDirectory</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 11, 2015</span>
+<h2 id="multiple-line-code">Multiple Line Code</h2>
+<p>–remove the <code>\</code> betwee <code>{</code> and <code>%</code></p>
 
-        <h2>
-          <a class="post-link" href="/markdown/2015/05/11/Markdown%20common%20grammar.html">Markdown common grammar</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 10, 2015</span>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">{</span><span class="err">\</span><span class="o">%</span> <span class="n">highlight</span> <span class="n">objective</span><span class="o">-</span><span class="n">c</span> <span class="o">%</span><span class="p">}</span>
+<span class="n">CodesIsHere</span>
+<span class="p">{</span><span class="err">\</span><span class="o">%</span> <span class="n">endhighlight</span> <span class="o">%</span><span class="p">}</span></code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2015/05/10/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
+<h2 id="headers">Headers</h2>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<pre><code># This is an &lt;h1&gt; tag
+## This is an &lt;h2&gt; tag
+###### This is an &lt;h6&gt; tag
+</code></pre>
+
+<h2 id="emphasis">Emphasis</h2>
+
+<pre><code>*This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+*You **can** combine them*
+</code></pre>
+
+<h4 id="unordered-list">Unordered List</h4>
+
+<pre><code>* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+</code></pre>
+
+<h4 id="ordered-list">Ordered List</h4>
+
+<pre><code>1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b
+</code></pre>
+
+<h4 id="images">Images</h4>
+<p><img src="/images/logo.png" alt="GitHub Logo" /></p>
+
+<pre><code>![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+</code></pre>
+
+<h4 id="links">Links</h4>
+<p><a href="http://github.com">Lint to GitHub</a></p>
+
+<pre><code>[Lint to GitHub](http://github.com)
+</code></pre>
+
+<h4 id="inline">inline</h4>
+
+<pre><code>`code here`
+</code></pre>
+
+<h4 id="inline-1">inline</h4>
+
+<pre><code>`code here`
+</code></pre>
+
+<h4 id="inline-2">inline</h4>
+
+<pre><code>`code here`
+</code></pre>
+
+<h4 id="inline-3">inline</h4>
+
+<pre><code>`code here`
+</code></pre>
+
+<h4 id="inline-4">inline</h4>
+
+<pre><code>`code here`
+</code></pre>
+
+
+  </article>
 
 </div>
 
