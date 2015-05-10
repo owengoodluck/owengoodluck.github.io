@@ -1,7 +1,7 @@
 # Site settings
 title: Owen's Blog on GitHub
 email: owen_goodluck@163.com
-description:  Owen's blog on Github. it records the life and work of Owen
+description:  This blog records the life and work of Owen !
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://owengoodluck.github.io" # the base hostname & protocol for your site
 twitter_username: 
