@@ -24,3 +24,12 @@ categories: iOS-core
 {% endhighlight %}
 
 The difference is that the correct code snip is using **NSDocumentDirectory** as parameter but the wrong code snip is using **NSDocumentationDirectory** .
+
+
+------------------------------
+Another way to get the directory :
+
+{% highlight objective-C %}
+	NSString *rootPathString = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+	NSURL *storeUrl =[ NSURL fileURLWithPath: [rootPathString stringByAppendingPathComponent: @"RSS.sqlite"] ];
+{% endhighlight %}
