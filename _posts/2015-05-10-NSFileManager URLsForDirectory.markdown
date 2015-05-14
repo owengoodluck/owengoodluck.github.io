@@ -5,7 +5,7 @@ date:   2015-05-10 22:28:49
 categories: iOS-core
 ---
 
-#Correct codeing
+# Correct codeing
  {% highlight objective-C %}
 -(NSURL *)uniqueDoucmentionURL{
    	NSArray * documentDirectories  = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
@@ -14,7 +14,7 @@ categories: iOS-core
 }
  {% endhighlight %} 
 
-#Wrong coding
+# Wrong coding
 {% highlight objective-C %}
 	-(NSURL *)uniqueDoucmentionURL{
 		NSArray * documentDirectories  = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask];
@@ -27,7 +27,7 @@ The difference is that the correct code snip is using **NSDocumentDirectory** as
 
 
 ------------------------------
-Another way to get the directory :
+# Another way to get the directory :
 
 {% highlight objective-C %}
 	NSString *rootPathString = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
