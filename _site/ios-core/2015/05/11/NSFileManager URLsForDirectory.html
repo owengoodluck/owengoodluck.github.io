@@ -80,6 +80,13 @@
 
 <p>The difference is that the correct code snip is using <strong>NSDocumentDirectory</strong> as parameter but the wrong code snip is using <strong>NSDocumentationDirectory</strong> .</p>
 
+<hr />
+<p># Another way to get the directory :</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="bp">NSString</span> <span class="o">*</span><span class="n">rootPathString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSSearchPathForDirectoriesInDomains</span><span class="p">(</span><span class="n">NSDocumentDirectory</span><span class="p">,</span> <span class="n">NSUserDomainMask</span><span class="p">,</span> <span class="nb">YES</span><span class="p">)</span> <span class="n">lastObject</span><span class="p">];</span>
+	<span class="bp">NSURL</span> <span class="o">*</span><span class="n">storeUrl</span> <span class="o">=</span><span class="p">[</span> <span class="bp">NSURL</span> <span class="nl">fileURLWithPath</span><span class="p">:</span> <span class="p">[</span><span class="n">rootPathString</span> <span class="nl">stringByAppendingPathComponent</span><span class="p">:</span> <span class="s">@&quot;RSS.sqlite&quot;</span><span class="p">]</span> <span class="p">];</span></code></pre></div>
+
+
   </article>
 
 </div>

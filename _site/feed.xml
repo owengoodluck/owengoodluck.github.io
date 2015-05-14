@@ -5,9 +5,140 @@
     <description>This blog records the life and work of Owen !</description>
     <link>http://owengoodluck.github.io/</link>
     <atom:link href="http://owengoodluck.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 May 2015 23:54:59 +0800</pubDate>
-    <lastBuildDate>Tue, 12 May 2015 23:54:59 +0800</lastBuildDate>
+    <pubDate>Thu, 14 May 2015 23:43:04 +0800</pubDate>
+    <lastBuildDate>Thu, 14 May 2015 23:43:04 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>iOS App升级安装 - CoreData数据库升级</title>
+        <description>&lt;p&gt;如果IOS App 使用到CoreData，并且在上一个版本上有数据库更新（新增表、字段等操作），那在覆盖安装程序时就要进行CoreData数据库的迁移，具体操作如下：&lt;/p&gt;
+
+&lt;p&gt;1.选中你的mydata.xcdatamodeld文件，选择菜单editor-&amp;gt;Add Model Version  比如取名：mydata2.xcdatamodel&lt;/p&gt;
+
+&lt;p&gt;2.设置当前版本
+   选择上级mydata.xcdatamodeld ，在inspector中的Versioned Core Data Model选择Current模版为mydata2&lt;/p&gt;
+
+&lt;p&gt;3.修改新数据模型mydata2，在新的文件上添加字段及表&lt;/p&gt;
+
+&lt;p&gt;4.删除原来的类文件，重新生成下类。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSPersistentStoreCoordinator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;persistentStoreCoordinator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_persistentStoreCoordinator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_persistentStoreCoordinator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;storeUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;fileURLWithPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applicationDocumentsDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+                                               &lt;span class=&quot;nl&quot;&gt;stringByAppendingPathComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;RSS.sqlite&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;NSError&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;bp&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                             &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;numberWithBool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSMigratePersistentStoresAutomaticallyOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                             &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;numberWithBool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSInferMappingModelAutomaticallyOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                             &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_persistentStoreCoordinator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSPersistentStoreCoordinator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+                                   &lt;span class=&quot;nl&quot;&gt;initWithManagedObjectModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedObjectModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_persistentStoreCoordinator&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;addPersistentStoreWithType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSSQLiteStoreType&lt;/span&gt;
+                                                  &lt;span class=&quot;nl&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;
+                                                            &lt;span class=&quot;nl&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;storeUrl&lt;/span&gt;
+                                                        &lt;span class=&quot;nl&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;
+                                                          &lt;span class=&quot;nl&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;cm&quot;&gt;/*Error for store creation should be handled in here*/&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_persistentStoreCoordinator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 15 May 2015 06:28:49 +0800</pubDate>
+        <link>http://owengoodluck.github.io/ios-core/core/data/2015/05/15/iOS%20App%E5%8D%87%E7%BA%A7%E5%AE%89%E8%A3%85%20-%20CoreData%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8D%87%E7%BA%A7.html</link>
+        <guid isPermaLink="true">http://owengoodluck.github.io/ios-core/core/data/2015/05/15/iOS%20App%E5%8D%87%E7%BA%A7%E5%AE%89%E8%A3%85%20-%20CoreData%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8D%87%E7%BA%A7.html</guid>
+        
+        
+        <category>ios-core</category>
+        
+        <category>core</category>
+        
+        <category>data</category>
+        
+      </item>
+    
+      <item>
+        <title>iOS App  Core Data Conception</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;1.Core Data 是数据持久化存储的最佳方式&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;2.数据最终的存储类型可以是：SQLite数据库，XML，二进制，内存里，或自定义数据类型&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在Mac OS X 10.5Leopard及以后的版本中，开发者也可以通过继承NSPersistentStore类以创建自定义的存储格式&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;3.好处：能够合理管理内存，避免使用sql的麻烦，高效&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;4.构成：&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;NSManagedObjectContext&lt;/strong&gt;（被管理的数据上下文）
+操作实际内容（操作持久层）
+作用：插入数据，查询数据，删除数据&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NSManagedObjectModel&lt;/strong&gt;（被管理的数据模型）
+数据库所有表格或数据结构，包含各实体的定义信息
+作用：添加实体的属性，建立属性之间的关系
+操作方法：视图编辑器，或代码&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NSPersistentStoreCoordinator&lt;/strong&gt;（持久化存储助理） 相当于数据库的连接器 作用：设置数据存储的名字，位置，存储方式，和存储时机&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NSManagedObject&lt;/strong&gt;（被管理的数据记录） 相当于数据库中的表格记录&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NSFetchRequest&lt;/strong&gt;（获取数据的请求） 相当于查询语句&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NSEntityDescription&lt;/strong&gt;（实体结构） 相当于表格结构&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.xcdatamodeld&lt;/strong&gt; 里面是.xcdatamodel文件，用数据模型编辑器编辑 ,编译后为.momd或.mom文件&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xiaodao/archive/2012/10/08/2715477.html&quot;&gt;iphone数据存储之－－ Core Data的使用（一）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xiaodao/archive/2012/10/09/2716579.html&quot;&gt;iphone数据存储之－－ Core Data的使用（二）&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 May 2015 06:28:49 +0800</pubDate>
+        <link>http://owengoodluck.github.io/ios-core/core/data/2015/05/15/iOS%20-%20Core%20Data%20Conception.html</link>
+        <guid isPermaLink="true">http://owengoodluck.github.io/ios-core/core/data/2015/05/15/iOS%20-%20Core%20Data%20Conception.html</guid>
+        
+        
+        <category>ios-core</category>
+        
+        <category>core</category>
+        
+        <category>data</category>
+        
+      </item>
+    
+      <item>
+        <title>Empty Template</title>
+        <description>&lt;hr /&gt;
+
+&lt;p&gt;1 . item 1
+    * AAA
+    * BBB
+  2 . item 2&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//code here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 15 May 2015 06:28:49 +0800</pubDate>
+        <link>http://owengoodluck.github.io/template/2015/05/15/Empty%20Template.html</link>
+        <guid isPermaLink="true">http://owengoodluck.github.io/template/2015/05/15/Empty%20Template.html</guid>
+        
+        
+        <category>template</category>
+        
+      </item>
     
       <item>
         <title>Dispatch Queue</title>
@@ -101,6 +232,13 @@
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The difference is that the correct code snip is using &lt;strong&gt;NSDocumentDirectory&lt;/strong&gt; as parameter but the wrong code snip is using &lt;strong&gt;NSDocumentationDirectory&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;# Another way to get the directory :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootPathString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSSearchPathForDirectoriesInDomains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDocumentDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSUserDomainMask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+	&lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;storeUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;fileURLWithPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootPathString&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringByAppendingPathComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;RSS.sqlite&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 </description>
         <pubDate>Mon, 11 May 2015 06:28:49 +0800</pubDate>
         <link>http://owengoodluck.github.io/ios-core/2015/05/11/NSFileManager%20URLsForDirectory.html</link>
