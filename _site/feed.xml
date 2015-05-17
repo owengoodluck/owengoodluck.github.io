@@ -5,8 +5,8 @@
     <description>This blog records the life and work of Owen !</description>
     <link>http://owengoodluck.github.io/</link>
     <atom:link href="http://owengoodluck.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 May 2015 10:17:00 +0800</pubDate>
-    <lastBuildDate>Sun, 17 May 2015 10:17:00 +0800</lastBuildDate>
+    <pubDate>Sun, 17 May 2015 10:25:36 +0800</pubDate>
+    <lastBuildDate>Sun, 17 May 2015 10:25:36 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -20,15 +20,16 @@ CMD + SHIFT + H:  回主界面&lt;/p&gt;
 CMD + SHIFT + K: 清理 ,Clean the build files&lt;br /&gt;
 CMD + SHIT + J  :  Locate the file in Navigation area&lt;br /&gt;
 CMD + ～   :快速切换两个项目&lt;br /&gt;
-Ctrl + K ：删除本行&lt;br /&gt;
-CMD + OPT + ?: 开发手册&lt;br /&gt;
+Ctrl + K ：删除本行&lt;/p&gt;
+
+&lt;p&gt;CMD + OPT + ?: 开发手册&lt;br /&gt;
 CMD + CTRL + ?: 快速帮助&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;Xcode中查看方法的调用者列表&lt;br /&gt;
-  1.  在代码中双击高亮方法名&lt;br /&gt;
-  2.  点击代码编辑区域左上角的”方块”图标,会弹出一个弹出窗口。&lt;br /&gt;
+1.  在代码中双击高亮方法名&lt;br /&gt;
+2.  点击代码编辑区域左上角的”方块”图标,会弹出一个弹出窗口。&lt;br /&gt;
   3.  在弹出窗口中选择Callers,右侧就有列出所有调用此方法的位置;选择Callees则会显示此方法调用的所有其他方法。&lt;/p&gt;
 </description>
         <pubDate>Mon, 18 May 2015 06:28:49 +0800</pubDate>
