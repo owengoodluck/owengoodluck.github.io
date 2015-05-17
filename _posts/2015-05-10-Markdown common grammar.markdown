@@ -59,9 +59,8 @@ CodesIsHere
     
 	[Lint to GitHub](http://github.com)
     
-#### inline 
-    
-	`code here`
+#### new lines
+    at least 2 space at the end of the line
     
 #### inline 
     
