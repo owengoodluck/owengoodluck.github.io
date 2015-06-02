@@ -5,8 +5,8 @@
     <description>This blog records the life and work of Owen !</description>
     <link>http://owengoodluck.github.io/</link>
     <atom:link href="http://owengoodluck.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 May 2015 22:50:21 +0800</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 22:50:21 +0800</lastBuildDate>
+    <pubDate>Mon, 01 Jun 2015 20:52:32 +0800</pubDate>
+    <lastBuildDate>Mon, 01 Jun 2015 20:52:32 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -606,6 +606,42 @@ By default , if we just add bar button items into tool bar ,then the items will 
 if you add some space between 2 items , then for Fixed Space Bar Button Item, it will only take certain space . for Flexible Space Bar Button Item, it will try to occupy as many space as possible .   &lt;br /&gt;
 if you have 2 bar buttons and you want to put then on 2 side of the toolbar ,then you can add a  Fixed Space Bar Button Item between them.&lt;br /&gt;
 if you have 3 bar bottons and you want then in left center and right , then you need to add 2 Fixed Space Bar Button Items  insides them&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;core-data-does-not-have-a-boolean-type-it-does-but-it-is-an-nsnumber&quot;&gt;Core Data “does not have” a Boolean type (it does, but it is an NSNumber).&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;[entity setUseGPS:[NSNumber numberWithBool:YES]];&lt;/code&gt;&lt;br /&gt;
+And the other way around:&lt;br /&gt;
+&lt;code&gt;BOOL isGPSOn = [[entity useGPS] boolValue];&lt;/code&gt;&lt;br /&gt;
+Update: As pointed out by SKG, With literals in Objetive-C you can now do it in a simpler way:&lt;br /&gt;
+&lt;code&gt;[entity setUseGPS:@YES];&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;BOOL isGPSOn = entity.useGPS.boolValue;&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller-1&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller-2&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller-3&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
 </description>
         <pubDate>Sat, 02 May 2015 06:28:49 +0800</pubDate>
         <link>http://owengoodluck.github.io/core/2015/05/02/Code%20Snippet.html</link>

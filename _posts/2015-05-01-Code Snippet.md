@@ -41,3 +41,43 @@ By default , if we just add bar button items into tool bar ,then the items will 
 if you add some space between 2 items , then for Fixed Space Bar Button Item, it will only take certain space . for Flexible Space Bar Button Item, it will try to occupy as many space as possible .     
 if you have 2 bar buttons and you want to put then on 2 side of the toolbar ,then you can add a  Fixed Space Bar Button Item between them.  
 if you have 3 bar bottons and you want then in left center and right , then you need to add 2 Fixed Space Bar Button Items  insides them  
+
+ --------------------------------------------
+
+## Back to previous scenario/view in Navigation controller
+ {% highlight objective-C %}
+  [self.navigationController popViewControllerAnimated:YES];
+ {% endhighlight %} 
+
+  --------------------------------------------
+
+## Core Data "does not have" a Boolean type (it does, but it is an NSNumber).  
+`[entity setUseGPS:[NSNumber numberWithBool:YES]];`  
+And the other way around:  
+`BOOL isGPSOn = [[entity useGPS] boolValue];`  
+Update: As pointed out by SKG, With literals in Objetive-C you can now do it in a simpler way:  
+`[entity setUseGPS:@YES];`  
+`BOOL isGPSOn = entity.useGPS.boolValue;`  
+
+  --------------------------------------------
+
+## Back to previous scenario/view in Navigation controller
+ {% highlight objective-C %}
+  [self.navigationController popViewControllerAnimated:YES];
+ {% endhighlight %} 
+
+  --------------------------------------------
+
+## Back to previous scenario/view in Navigation controller
+ {% highlight objective-C %}
+  [self.navigationController popViewControllerAnimated:YES];
+ {% endhighlight %} 
+
+  --------------------------------------------
+
+## Back to previous scenario/view in Navigation controller
+ {% highlight objective-C %}
+  [self.navigationController popViewControllerAnimated:YES];
+ {% endhighlight %} 
+
+  --------------------------------------------    
