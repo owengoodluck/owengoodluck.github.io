@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Empty Template"
+title:  "It's never too later to start ! "
 date:   2015-06-07 22:28:49
-categories: template
+categories: life
 ---
 
 --------------------------------------------
@@ -15,9 +15,10 @@ As the Kitten discribed his life in junior of his university , he always indulge
 
 Kitten is yong , but he alreay know that , how come I can't get away from this useless things ? I don't have so much time to waste as a ignorant one .
 
-Less use of social apps . 
-Read more books and blog by outstanding/excelent person .
-Hard working and hard playing .
+Less use of social apps .   
+Read more books and blog by outstanding/excelent person .  
+Hard working and hard playing .  
 
-
-[Kitten's 时间胶囊](http://www.kittenyang.com/)   
+---------------------------------------------
+[Kitten's 时间胶囊](http://www.kittenyang.com/)  
+[Bang's blog](http://blog.cnbang.net/about/)   

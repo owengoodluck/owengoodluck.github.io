@@ -5,9 +5,38 @@
     <description>This blog records the life and work of Owen !</description>
     <link>http://owengoodluck.github.io/</link>
     <atom:link href="http://owengoodluck.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jun 2015 20:52:32 +0800</pubDate>
-    <lastBuildDate>Mon, 01 Jun 2015 20:52:32 +0800</lastBuildDate>
+    <pubDate>Sun, 07 Jun 2015 22:42:38 +0800</pubDate>
+    <lastBuildDate>Sun, 07 Jun 2015 22:42:38 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>It&#39;s never too later to start ! </title>
+        <description>&lt;hr /&gt;
+
+&lt;p&gt;It’s never too later to start !&lt;/p&gt;
+
+&lt;p&gt;Today I read a blog &lt;a href=&quot;http://www.kittenyang.com/&quot;&gt;Kitten’s 时间胶囊&lt;/a&gt; , although the author is yong (born on 1994) , but I think his thought is mature .&lt;br /&gt;
+I can’t help thinking of myself . I am thirty years old , I am alrady a father , but I am still childish , selfish , self-indulgent and hedonistic ，nothing achived .&lt;br /&gt;
+As the Kitten discribed his life in junior of his university , he always indulged in wechat, RenRen and such kind of socail apps , to discover other’s life , browse gossip, all this will make you feel purposeless and empty, and the more you feel purposeless and empty , the more you use and depend on social apps .&lt;/p&gt;
+
+&lt;p&gt;Kitten is yong , but he alreay know that , how come I can’t get away from this useless things ? I don’t have so much time to waste as a ignorant one .&lt;/p&gt;
+
+&lt;p&gt;Less use of social apps . &lt;br /&gt;
+Read more books and blog by outstanding/excelent person .&lt;br /&gt;
+Hard working and hard playing .&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.kittenyang.com/&quot;&gt;Kitten’s 时间胶囊&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://blog.cnbang.net/about/&quot;&gt;Bang’s blog&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Jun 2015 06:28:49 +0800</pubDate>
+        <link>http://owengoodluck.github.io/life/2015/06/08/It's%20never%20too%20later%20to%20start.html</link>
+        <guid isPermaLink="true">http://owengoodluck.github.io/life/2015/06/08/It's%20never%20too%20later%20to%20start.html</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>Xcode Usage</title>
@@ -570,85 +599,6 @@ Format: ![Alt Text](url)
         
         
         <category>template</category>
-        
-      </item>
-    
-      <item>
-        <title>Code Snippet</title>
-        <description>&lt;h2 id=&quot;get-application-delegatte&quot;&gt;Get application delegatte&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;n&quot;&gt;AppDelegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appDelegete&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AppDelegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;prevent-navigationtabbar-overlap-embeded--view&quot;&gt;Prevent navigation/tabBar overlap embeded  view&lt;/h2&gt;
-&lt;p&gt;add below code in embeded view when did load ,availabe for ios7 and later&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIDevice&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentDevice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;systemVersion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;floatValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;7.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;edgesForExtendedLayout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIRectEdgeNone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;automaticallyAdjustsScrollViewInsets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hide tabBar ` detailVC.hidesBottomBarWhenPushed = YES; `
- ——————————————–&lt;/p&gt;
-
-&lt;h2 id=&quot;dateformat&quot;&gt;DateFormat&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;bp&quot;&gt;NSDateFormatter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSDateFormatter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateFormat&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setDateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;MM.dd HH:mm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateFormat&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringFromDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;toolbar-and-bar-button-usage&quot;&gt;Toolbar and bar button usage&lt;/h2&gt;
-&lt;p&gt;ToolBar、Bar Button Item、Fixed Space Bar Button Item、Flexible Space Bar Button Item。前两个是可见的工具栏和工具栏项目，后两个只是用于调节按钮位置固定调节和灵活调节。&lt;br /&gt;
-By default , if we just add bar button items into tool bar ,then the items will be arranged from left to right one by one .  &lt;br /&gt;
-if you add some space between 2 items , then for Fixed Space Bar Button Item, it will only take certain space . for Flexible Space Bar Button Item, it will try to occupy as many space as possible .   &lt;br /&gt;
-if you have 2 bar buttons and you want to put then on 2 side of the toolbar ,then you can add a  Fixed Space Bar Button Item between them.&lt;br /&gt;
-if you have 3 bar bottons and you want then in left center and right , then you need to add 2 Fixed Space Bar Button Items  insides them&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;core-data-does-not-have-a-boolean-type-it-does-but-it-is-an-nsnumber&quot;&gt;Core Data “does not have” a Boolean type (it does, but it is an NSNumber).&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;[entity setUseGPS:[NSNumber numberWithBool:YES]];&lt;/code&gt;&lt;br /&gt;
-And the other way around:&lt;br /&gt;
-&lt;code&gt;BOOL isGPSOn = [[entity useGPS] boolValue];&lt;/code&gt;&lt;br /&gt;
-Update: As pointed out by SKG, With literals in Objetive-C you can now do it in a simpler way:&lt;br /&gt;
-&lt;code&gt;[entity setUseGPS:@YES];&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;BOOL isGPSOn = entity.useGPS.boolValue;&lt;/code&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller-1&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller-2&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;back-to-previous-scenarioview-in-navigation-controller-3&quot;&gt;Back to previous scenario/view in Navigation controller&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;popViewControllerAnimated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Sat, 02 May 2015 06:28:49 +0800</pubDate>
-        <link>http://owengoodluck.github.io/core/2015/05/02/Code%20Snippet.html</link>
-        <guid isPermaLink="true">http://owengoodluck.github.io/core/2015/05/02/Code%20Snippet.html</guid>
-        
-        
-        <category>core</category>
         
       </item>
     
