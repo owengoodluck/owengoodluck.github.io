@@ -20,5 +20,6 @@ Read more books and blog by outstanding/excelent person .
 Hard working and hard playing .  
 
 ---------------------------------------------
-[Kitten's 时间胶囊](http://www.kittenyang.com/)  
+[Kitten's 时间胶囊](http://www.kittenyang.com/)    
 [Bang's blog](http://blog.cnbang.net/about/)   
+[Jack's home page](http://www.pailixiu.com/Jack/personal/) ; [Jack's blog](http://www.pailixiu.com/blog/)  
