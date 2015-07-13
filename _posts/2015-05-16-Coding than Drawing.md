@@ -46,10 +46,11 @@ categories: template
  {% endhighlight %} 
 
 --------------------------------------------
-  * **Block** : XXX
+  * **Block** : Modal View Controller
  {% highlight objective-C %}
-
-//CODING
+//dismiss the modal view  
+self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:nil];
 
  {% endhighlight %} 
 --------------------------------------------
